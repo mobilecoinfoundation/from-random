@@ -84,6 +84,6 @@ branches:
           - "build (stable)"
           - "test (stable)"
           - "doc (stable)"
-          - "coverage (stable)"
+          - coverage
       enforce_admins: false
       restrictions: null
