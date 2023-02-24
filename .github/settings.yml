@@ -76,11 +76,11 @@ branches:
           - yamllint
           - "deny (bans licenses sources)"
           - sort
-          - clippy
-          - build
-          - test
-          - doc
-          - coverage
+          - "clippy (stable)"
+          - "build (stable)"
+          - "test (stable)"
+          - "doc (stable)"
+          - "coverage (stable)"
       enforce_admins: true
       required_pull_request_reviews:
         require_code_owner_reviews: true
