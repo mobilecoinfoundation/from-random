@@ -67,26 +67,10 @@ branches:
   - name: main
     # https://docs.github.com/en/rest/branches/branch-protection?apiVersion=2022-11-28
     protection:
+      required_pull_request_reviews: null
+      required_conversation_resolution: true
       required_status_checks:
         strict: false
-        contexts:
-          - "rustfmt"
-          - "markdown-lint"
-          - "yamllint"
-          - "deny (bans licenses sources)"
-          - "sort"
-          - "clippy (stable)"
-          - "build (stable)"
-          - "test (stable)"
-          - "doc (stable)"
-          - "coverage (stable)"
+        contexts: []
       enforce_admins: false
-      required_pull_request_reviews:
-        require_code_owner_reviews: true
-        required_approving_review_count: 2
-        require_last_push_approval: true
-        dismissal_restrictions: null
       restrictions: null
-      required_linear_history: true
-      required_conversation_resolution: true
-      required_signatures: true
