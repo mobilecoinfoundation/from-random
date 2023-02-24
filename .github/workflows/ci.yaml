@@ -279,9 +279,11 @@ jobs:
           status: Failure
           color: 0xff0000
           nodetail: true
+          # yamllint disable rule:line-length
           title: "${{ github.repository }} ${{ github.workflow }} has failed on ${{ github.ref_name }}"
           url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           description: >
             [`@${{ github.actor }}`](${{ github.server_url }}/${{ github.actor }})
             was the last one to touch `${{ github.repository }}`, is all I'm saying.
           avatar_url: "https://media0.giphy.com/media/oe33xf3B50fsc/200.gif"
+          # yamllint enable rule:line-length
