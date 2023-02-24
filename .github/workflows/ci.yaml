@@ -274,14 +274,14 @@ jobs:
       - name: Notify Discord on failure
         uses: sarisia/actions-status-discord@v1
         with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
           username: "Github Actions"
           status: Failure
           nodetail: true
+          content: Wat.
           title: "Workflow: ${{ github.workflow }}"
           url: ${{ github.repository_url }}/actions/runs/${{ github.run_id }}
           description: |
-            [@${{ github.pusher }}](${{ github.url }}/${{ github.pusher }}]
-            was the last one to touch ${{ github.repository }}, is all I'm
-            saying...
+            A push to master from [@${{ github.pusher }}](${{ github.url }}/${{ github.pusher }}]
+            failed CI
           avatar_url: "https://media0.giphy.com/media/oe33xf3B50fsc/200.gif"
-          webhook: ${{ secrets.DISCORD_WEBHOOK }}
