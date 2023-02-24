@@ -189,6 +189,7 @@ jobs:
           - stable
           - beta
           - nightly-2023-01-04
+      fail-fast: false
     steps:
       - uses: actions/checkout@v3
       - uses: dtolnay/rust-toolchain@master
@@ -209,6 +210,7 @@ jobs:
           - stable
           - beta
           - nightly-2023-01-04
+      fail-fast: false
     steps:
       - uses: actions/checkout@v3
       - uses: dtolnay/rust-toolchain@master
@@ -228,8 +230,7 @@ jobs:
         rust:
           - stable
           - beta
-    # Prevent beta docs warnings from causing CI failure
-    continue-on-error: ${{ matrix.rust == 'beta' }}
+      fail-fast: false
     steps:
       - uses: actions/checkout@v3
       - uses: dtolnay/rust-toolchain@master
@@ -261,6 +262,7 @@ jobs:
     needs:
       - rustfmt
       - markdown-lint
+      - yamllint
       - deny
       - sort
       - clippy
