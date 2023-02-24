@@ -86,4 +86,5 @@ branches:
           - "doc (stable)"
           - coverage
       enforce_admins: false
+      required_linear_history: true
       restrictions: null
