@@ -74,6 +74,16 @@ branches:
       required_conversation_resolution: true
       required_status_checks:
         strict: false
-        contexts: []
+        contexts:
+          - "rustfmt"
+          - "markdown-lint"
+          - "yamllint"
+          - "deny (bans licenses sources)"
+          - "sort"
+          - "clippy (stable)"
+          - "build (stable)"
+          - "test (stable)"
+          - "doc (stable)"
+          - "coverage (stable)"
       enforce_admins: false
       restrictions: null
