@@ -277,10 +277,11 @@ jobs:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           username: "Github Actions"
           status: Failure
+          color: 0xff0000
           nodetail: true
           content: Wat.
           title: "Workflow: ${{ github.workflow }}"
-          url: ${{ github.repository_url }}/actions/runs/${{ github.run_id }}
+          url: ${{ github.server_url }}/${{  github.repository }}/actions/runs/${{ github.run_id }}
           description: |
             A push to master from [@${{ github.pusher }}](${{ github.url }}/${{ github.pusher }}]
             failed CI
