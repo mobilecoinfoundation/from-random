@@ -67,7 +67,10 @@ branches:
   - name: main
     # https://docs.github.com/en/rest/branches/branch-protection?apiVersion=2022-11-28
     protection:
-      required_pull_request_reviews: null
+      required_pull_request_reviews:
+        required_approving_review_count: 2
+        dismiss_stale_Reviews: false
+        require_code_owner_reviews: true
       required_conversation_resolution: true
       required_status_checks:
         strict: false
