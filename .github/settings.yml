@@ -87,4 +87,5 @@ branches:
           - coverage
       enforce_admins: false
       required_linear_history: true
+      required_signed_commits: true
       restrictions: null
