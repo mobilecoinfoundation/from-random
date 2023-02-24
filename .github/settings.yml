@@ -69,17 +69,18 @@ branches:
     protection:
       required_pull_request_reviews:
         required_approving_review_count: 2
-        dismiss_stale_Reviews: false
+        dismiss_stale_reviews: false
         require_code_owner_reviews: true
+        require_last_push_approval: true
       required_conversation_resolution: true
       required_status_checks:
         strict: false
         contexts:
-          - "rustfmt"
-          - "markdown-lint"
-          - "yamllint"
+          - rustfmt
+          - markdown-lint
+          - yamllint
           - "deny (bans licenses sources)"
-          - "sort"
+          - sort
           - "clippy (stable)"
           - "build (stable)"
           - "test (stable)"
@@ -87,5 +88,4 @@ branches:
           - coverage
       enforce_admins: false
       required_linear_history: true
-      required_signed_commits: true
       restrictions: null
