@@ -258,7 +258,7 @@ jobs:
 
   notify:
     runs-on: ubuntu-latest
-    if: failure() && ${{ github.event_name }} == 'push'
+    if: github.event_name == 'push' && failure()
     needs:
       - rustfmt
       - markdown-lint
