@@ -1,0 +1,30 @@
+{
+  "template": "https://github.com/mobilecoinfoundation/cookiecutters",
+  "commit": "6a4ad0a4b81a70e851e09cdcd1e6a5624b4d34eb",
+  "checkout": "jcape/import-json",
+  "context": {
+    "cookiecutter": {
+      "_copy_without_render": [
+        ".github/workflows/*"
+      ],
+      "repo_name": "from-random",
+      "github_username": "@jcape",
+      "owners": "@jcape",
+      "type": "single-crate",
+      "license": "Apache-2.0",
+      "arch": "any",
+      "workspace_description": "A brief summary of the workspace",
+      "workspace_readme_title": "MobileCoin: A brief summary of the workspace",
+      "crate_name": "mc-from-random",
+      "crate_namespace_prefix": "mc-",
+      "crate_description": "A trait for constructing an object from a CSPRNG",
+      "crate_readme_title": "MobileCoin: A trait for constructing an object from a CSPRNG",
+      "crate_sub_dir": "from/random",
+      "version": "1.0.0",
+      "crate_keywords": "random rng cryptography",
+      "crate_categories": "cryptography no-std",
+      "_template": "https://github.com/mobilecoinfoundation/cookiecutters"
+    }
+  },
+  "directory": "rust/repo"
+}

@@ -1,0 +1,35 @@
+[package]
+name = "mc-from-random"
+version = "1.0.0"
+authors = ["MobileCoin"]
+# See https://crates.io/category_slugs for valid categories
+categories = ["cryptography", "no-std"]
+description = "A trait for constructing an object from an CSPRNG"
+edition = "2021"
+# See https://crates.io/keywords for the common keywords
+keywords = ["random", "rng", "cryptography"]
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/mobilecoinfoundation/from-random"
+rust-version = "1.67.1"
+
+[profile.release]
+lto = "thin"
+
+[metadata.release]
+shared-version = true
+dev-version-ext = "beta.0"
+consolidate-commits = true
+consolidate-pushes = true
+tag-name = "v{{version}}"
+
+# The file names in this key are relative to the each crate that gets released.
+# So we only need one `README.md` entry if all the README's follow a
+# common format and are always next to the Cargo.toml for their respective
+# package.
+pre-release-replacements = [
+    {file="README.md", search="mc-[a-z-]+/[0-9.]+", replace="{{crate_name}}/{{version}}"},
+]
+
+[dependencies]
+rand_core = { version = "0.6", default_features = false }
