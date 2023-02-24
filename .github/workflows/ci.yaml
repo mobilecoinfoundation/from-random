@@ -279,7 +279,7 @@ jobs:
           status: Failure
           color: 0xff0000
           nodetail: true
-          title: "CI has failed on main!"
+          title: "${{ github.repository }} ${{ github.workflow }} has failed on ${{ github.ref_name }}"
           url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           description: >
             [`@${{ github.actor }}`](${{ github.server_url }}/${{ github.actor }})
