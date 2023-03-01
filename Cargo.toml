@@ -33,3 +33,6 @@ pre-release-replacements = [
 
 [dependencies]
 rand_core = { version = "0.6", default_features = false }
+
+[dev-dependencies]
+rand_chacha = "0.3.1"
