@@ -84,7 +84,7 @@ jobs:
           # - Convert the table to GHF markdown
           # - Sort descending by the "LoC" value (first column preceeds first
           #   pipe)
-
+          cargo generate-lockfile --offline
           cargo crev crate verify \
               --for-id vMr-9g5KzKQLsCpkp1tc8o7AR6a0OptjOICjf7NMyHE \
               --show-all \
