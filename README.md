@@ -30,8 +30,7 @@ impl FromRandom for MyStruct {
     }
 }
 
-assert_eq!(0x55, 0b0101_0101);
-const SEED: [u8; 32] = [0x55; 32];
+const SEED: [u8; 32] = [0b0101_0101; 32];
 
 let mut csprng = ChaChaRng::from_seed(SEED);
 let myobj = MyStruct::from_random(&mut csprng);
