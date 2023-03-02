@@ -1,8 +1,10 @@
 # These lines impact repository security
-/.github/CODEOWNERS        @jcape
-/.github/settings.yml      @jcape
+
+/.github/CODEOWNERS        @jcape @varsha888
+/.github/settings.yml      @jcape @varsha888
 
 # These lines prevent reviews of trivial changes blocking on particular users
+
 /.gitattributes
 /.gitconfig
 /.gitignore
@@ -15,3 +17,5 @@
 /deny.toml
 /rust-toolchain.toml
 /rustfmt.toml
+
+/src/                      @jcape @varsha888
