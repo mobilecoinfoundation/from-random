@@ -16,6 +16,7 @@ A trait for constructing an object from an CSPRNG.
 
 ```rust
 use mc_from_random::{CryptoRng, FromRandom, RngCore};
+use rand_chacha::{ChaChaRng, rand_core::SeedableRng};
 
 struct MyStruct {
     pub bytes: [u8; 32],
@@ -28,6 +29,16 @@ impl FromRandom for MyStruct {
         }
     }
 }
+
+const SEED: [u8; 32] = [0b0101_0101; 32];
+
+let mut csprng = ChaChaRng::from_seed(SEED);
+let myobj = MyStruct::from_random(&mut csprng);
+let expected: [u8; 32] = [
+    0xb0, 0x23, 0x58, 0xb3, 0x7e, 0x4f, 0x68, 0x68, 0xfb, 0x48, 0xaf, 0x8a, 0xb2, 0x75, 0x0b, 0x06,
+    0x2a, 0xa9, 0x5a, 0x83, 0x1b, 0xc2, 0x19, 0x78, 0xa9, 0x8e, 0x94, 0x42, 0x64, 0xfa, 0x0e, 0x75
+];
+assert_eq!(expected, myobj.bytes);
 ```
 
 [chat-image]: https://img.shields.io/discord/844353360348971068?style=flat-square
@@ -42,7 +53,7 @@ impl FromRandom for MyStruct {
 [deps-link]: https://deps.rs/repo/github/mobilecoinfoundation/from-random
 [codecov-image]: https://img.shields.io/codecov/c/github/mobilecoinfoundation/from-random/develop?style=flat-square
 [codecov-link]: https://codecov.io/gh/mobilecoinfoundation/from-random
-[gha-image]: https://img.shields.io/github/workflow/status/mobilecoinfoundation/from-random/ci.yaml?branch=main&style=flat-square
+[gha-image]: https://img.shields.io/github/actions/workflow/status/mobilecoinfoundation/from-random/ci.yaml?branch=main&style=flat-square
 [gha-link]: https://github.com/mobilecoinfoundation/from-random/actions/workflows/ci.yaml?query=branch%3Amain
 [conduct-link]: CODE_OF_CONDUCT.md
 [conduct-image]: https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg?style=flat-square
