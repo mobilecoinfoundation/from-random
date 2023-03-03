@@ -20,4 +20,3 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           org: "mobilecoinfoundation"
           teams: "coredev"
-          pick-one-from-persons-or-team: true
