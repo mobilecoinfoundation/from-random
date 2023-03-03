@@ -14,7 +14,7 @@ env:
 
 jobs:
   # TODO: Fix automatically
-  rustfmt:
+  lint:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
@@ -23,30 +23,16 @@ jobs:
           components: rustfmt
       - uses: r7kamura/rust-problem-matchers@v1
       - run: cargo fmt --all -- --check
-
-  # TODO: Fix automatically
-  markdown-lint:
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v3
       - uses: xt0rted/markdownlint-problem-matcher@v2
       - uses: DavidAnson/markdownlint-cli2-action@v9
         with:
           globs: "**/*.md"
-
-  # TODO: Add problem matcher?
-  yamllint:
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v3
       - run: yamllint -s .
 
   crev:
     runs-on: ubuntu-22.04
     needs:
-      - "rustfmt"
-      - "markdown-lint"
-      - "yamllint"
+      - "lint"
     # TODO: once we have enough reviews, make this a required check
     continue-on-error: true
     permissions:
@@ -125,9 +111,7 @@ jobs:
   deny:
     runs-on: ubuntu-22.04
     needs:
-      - "rustfmt"
-      - "markdown-lint"
-      - "yamllint"
+      - "lint"
     strategy:
       matrix:
         checks:
@@ -144,9 +128,7 @@ jobs:
   sort:
     runs-on: ubuntu-22.04
     needs:
-      - "rustfmt"
-      - "markdown-lint"
-      - "yamllint"
+      - "lint"
     steps:
       - uses: actions/checkout@v3
       - uses: dtolnay/rust-toolchain@stable
@@ -157,9 +139,7 @@ jobs:
   clippy:
     runs-on: ubuntu-22.04
     needs:
-      - "rustfmt"
-      - "markdown-lint"
-      - "yamllint"
+      - "lint"
     strategy:
       matrix:
         rust:
@@ -180,9 +160,7 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     needs:
-      - "rustfmt"
-      - "markdown-lint"
-      - "yamllint"
+      - "lint"
     strategy:
       matrix:
         rust:
@@ -201,9 +179,7 @@ jobs:
   test:
     runs-on: ubuntu-22.04
     needs:
-      - "rustfmt"
-      - "markdown-lint"
-      - "yamllint"
+      - "lint"
     strategy:
       matrix:
         rust:
@@ -222,9 +198,7 @@ jobs:
   doc:
     runs-on: ubuntu-22.04
     needs:
-      - "rustfmt"
-      - "markdown-lint"
-      - "yamllint"
+      - "lint"
     strategy:
       matrix:
         rust:
@@ -242,9 +216,7 @@ jobs:
   coverage:
     runs-on: ubuntu-22.04
     needs:
-      - "rustfmt"
-      - "markdown-lint"
-      - "yamllint"
+      - "lint"
     steps:
       - uses: actions/checkout@v3
       - uses: dtolnay/rust-toolchain@stable
