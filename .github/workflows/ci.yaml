@@ -32,7 +32,7 @@ jobs:
   crev:
     runs-on: ubuntu-22.04
     needs:
-      - "lint"
+      - lint
     # TODO: once we have enough reviews, make this a required check
     continue-on-error: true
     permissions:
@@ -111,7 +111,7 @@ jobs:
   deny:
     runs-on: ubuntu-22.04
     needs:
-      - "lint"
+      - lint
     strategy:
       matrix:
         checks:
@@ -128,7 +128,7 @@ jobs:
   sort:
     runs-on: ubuntu-22.04
     needs:
-      - "lint"
+      - lint
     steps:
       - uses: actions/checkout@v3
       - uses: dtolnay/rust-toolchain@stable
@@ -139,7 +139,7 @@ jobs:
   clippy:
     runs-on: ubuntu-22.04
     needs:
-      - "lint"
+      - lint
     strategy:
       matrix:
         rust:
@@ -160,7 +160,7 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     needs:
-      - "lint"
+      - lint
     strategy:
       matrix:
         rust:
@@ -179,7 +179,7 @@ jobs:
   test:
     runs-on: ubuntu-22.04
     needs:
-      - "lint"
+      - lint
     strategy:
       matrix:
         rust:
@@ -198,7 +198,7 @@ jobs:
   doc:
     runs-on: ubuntu-22.04
     needs:
-      - "lint"
+      - lint
     strategy:
       matrix:
         rust:
@@ -216,7 +216,7 @@ jobs:
   coverage:
     runs-on: ubuntu-22.04
     needs:
-      - "lint"
+      - lint
     steps:
       - uses: actions/checkout@v3
       - uses: dtolnay/rust-toolchain@stable
@@ -232,9 +232,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && failure()
     needs:
-      - rustfmt
-      - markdown-lint
-      - yamllint
+      - lint
       - deny
       - sort
       - clippy
