@@ -56,7 +56,9 @@ labels:
     description: PRs that should get broken down
 
 collaborators:
-  - username: nick-mobilecoin
+  - username: varsha888
+    permission: maintain
+  - username: jcape
     permission: maintain
 
 teams:
