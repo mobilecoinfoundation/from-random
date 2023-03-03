@@ -56,6 +56,8 @@ labels:
     description: PRs that should get broken down
 
 collaborators:
+  - username: meowblecoinbot
+    permission: triage
   - username: varsha888
     permission: maintain
   - username: jcape
