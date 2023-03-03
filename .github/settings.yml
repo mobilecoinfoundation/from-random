@@ -56,7 +56,11 @@ labels:
     description: PRs that should get broken down
 
 collaborators:
-  - username: nick-mobilecoin
+  - username: meowblecoinbot
+    permission: triage
+  - username: varsha888
+    permission: maintain
+  - username: jcape
     permission: maintain
 
 teams:
@@ -76,9 +80,7 @@ branches:
       required_status_checks:
         strict: false
         contexts:
-          - rustfmt
-          - markdown-lint
-          - yamllint
+          - lint
           - "deny (bans licenses sources)"
           - sort
           - "clippy (stable)"
