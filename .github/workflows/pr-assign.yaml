@@ -13,5 +13,8 @@ jobs:
     steps:
       - uses: kentaro-m/auto-assign-action@v1.2.5
         with:
-          repo-token: ${{ secrets.MEOWBLECOIN_PAT }}
           configuration-path: '.github/auto_assign.yaml'
+      - uses: rowi1de/auto-assign-review-teams@v1.1.3
+        with:
+          repo-token: ${{ secrets.MEOWBLECOIN_PAT}}
+          teams: "@mobilecoinfoundation/coredev"
