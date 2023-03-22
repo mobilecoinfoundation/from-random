@@ -1,7 +1,7 @@
 {
   "template": "https://github.com/mobilecoinfoundation/cookiecutters",
-  "commit": "320a5f52342be1d470318cee71d19c75adbe4bd4",
-  "checkout": "jcape/import-json",
+  "commit": "f4ed2b157b8d6f05f96b816f1758cf99ca17d0d5",
+  "checkout": null,
   "context": {
     "cookiecutter": {
       "_copy_without_render": [
@@ -9,18 +9,18 @@
       ],
       "repo_name": "from-random",
       "github_username": "@jcape",
-      "owners": "@jcape",
+      "owners": "@jcape @varsha888",
       "type": "single-crate",
       "license": "Apache-2.0",
       "arch": "any",
-      "workspace_description": "A brief summary of the workspace",
-      "workspace_readme_title": "MobileCoin: A brief summary of the workspace",
+      "workspace_description": "MobileCoin's FromRandom Trait",
+      "workspace_readme_title": "MobileCoin: The FromRandom Trait",
       "crate_name": "mc-from-random",
       "crate_namespace_prefix": "mc-",
       "crate_description": "A trait for constructing an object from a CSPRNG",
       "crate_readme_title": "MobileCoin: A trait for constructing an object from a CSPRNG",
       "crate_sub_dir": "from/random",
-      "version": "1.0.0",
+      "version": "0.1.0",
       "crate_keywords": "random rng cryptography",
       "crate_categories": "cryptography no-std",
       "_template": "https://github.com/mobilecoinfoundation/cookiecutters"
