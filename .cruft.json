@@ -1,6 +1,6 @@
 {
   "template": "https://github.com/mobilecoinfoundation/cookiecutters",
-  "commit": "6a4ad0a4b81a70e851e09cdcd1e6a5624b4d34eb",
+  "commit": "320a5f52342be1d470318cee71d19c75adbe4bd4",
   "checkout": "jcape/import-json",
   "context": {
     "cookiecutter": {
