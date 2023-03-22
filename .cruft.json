@@ -1,6 +1,6 @@
 {
   "template": "https://github.com/mobilecoinfoundation/cookiecutters",
-  "commit": "f4ed2b157b8d6f05f96b816f1758cf99ca17d0d5",
+  "commit": "0c90944d70114c1b74944a935e800aef2f6c9f09",
   "checkout": null,
   "context": {
     "cookiecutter": {
@@ -20,7 +20,7 @@
       "crate_description": "A trait for constructing an object from a CSPRNG",
       "crate_readme_title": "MobileCoin: A trait for constructing an object from a CSPRNG",
       "crate_sub_dir": "from/random",
-      "version": "0.1.0",
+      "version": "0.0.0",
       "crate_keywords": "random rng cryptography",
       "crate_categories": "cryptography no-std",
       "_template": "https://github.com/mobilecoinfoundation/cookiecutters"
