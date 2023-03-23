@@ -42,7 +42,7 @@ assert_eq!(expected, myobj.bytes);
 ```
 
 [chat-image]: https://img.shields.io/discord/844353360348971068?style=flat-square
-[chat-link]: https://mobilecoin.chat
+[chat-link]: https://discord.gg/mobilecoin
 [license-image]: https://img.shields.io/crates/l/mc-from-random?style=flat-square
 [arch-image]: https://img.shields.io/badge/arch-any-brightgreen?style=flat-square
 [crate-image]: https://img.shields.io/crates/v/mc-from-random.svg?style=flat-square
