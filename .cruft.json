@@ -1,14 +1,21 @@
 {
   "template": "https://github.com/mobilecoinfoundation/cookiecutters",
-  "commit": "0c90944d70114c1b74944a935e800aef2f6c9f09",
+  "commit": "a241df51ef39ee59f502472b5abc04c16a612965",
   "checkout": null,
   "context": {
     "cookiecutter": {
       "_copy_without_render": [
-        ".github/workflows/*"
+        ".github/workflows/ci.yaml",
+        ".github/workflows/issues.yaml",
+        ".github/workflows/pr-assign.yaml",
+        ".github/workflows/pr.yaml"
       ],
       "repo_name": "from-random",
+      "repo_homepage": "https://mobilecoin.foundation/",
+      "github_org": "mobilecoinfoundation",
+      "github_teams": "coredev other_team",
       "github_username": "@jcape",
+      "default_branch": "main",
       "owners": "@jcape @varsha888",
       "type": "single-crate",
       "license": "Apache-2.0",

@@ -51,7 +51,7 @@ assert_eq!(expected, myobj.bytes);
 [docs-link]: https://docs.rs/crate/mc-from-random
 [deps-image]: https://deps.rs/repo/github/mobilecoinfoundation/from-random/status.svg?style=flat-square
 [deps-link]: https://deps.rs/repo/github/mobilecoinfoundation/from-random
-[codecov-image]: https://img.shields.io/codecov/c/github/mobilecoinfoundation/from-random/develop?style=flat-square
+[codecov-image]: https://img.shields.io/codecov/c/github/mobilecoinfoundation/from-random/main?style=flat-square
 [codecov-link]: https://codecov.io/gh/mobilecoinfoundation/from-random
 [gha-image]: https://img.shields.io/github/actions/workflow/status/mobilecoinfoundation/from-random/ci.yaml?branch=main&style=flat-square
 [gha-link]: https://github.com/mobilecoinfoundation/from-random/actions/workflows/ci.yaml?query=branch%3Amain
