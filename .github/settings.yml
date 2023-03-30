@@ -66,8 +66,6 @@ collaborators:
 teams:
   - name: coredev
     permission: push
-  - name: other_team
-    permission: push
 
 branches:
   - name: main

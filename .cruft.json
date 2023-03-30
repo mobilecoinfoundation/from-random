@@ -13,7 +13,7 @@
       "repo_name": "from-random",
       "repo_homepage": "https://mobilecoin.foundation/",
       "github_org": "mobilecoinfoundation",
-      "github_teams": "coredev other_team",
+      "github_teams": "coredev",
       "github_username": "@jcape",
       "default_branch": "main",
       "owners": "@jcape @varsha888",
