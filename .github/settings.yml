@@ -58,10 +58,10 @@ labels:
 collaborators:
   - username: meowblecoinbot
     permission: triage
-  - username: varsha888
-    permission: maintain
   - username: jcape
-    permission: maintain
+    permission: admin
+  - username: varsha888
+    permission: admin
 
 teams:
   - name: coredev
@@ -72,13 +72,30 @@ branches:
     # https://docs.github.com/en/rest/branches/branch-protection?apiVersion=2022-11-28
     protection:
       required_pull_request_reviews:
-        required_approving_review_count: 2
         dismiss_stale_reviews: false
         require_code_owner_reviews: true
-        require_last_push_approval: true
+        required_approving_review_count: 1
       required_conversation_resolution: true
       required_status_checks:
         strict: false
+        # These names need to match the matrix job name.
+        # For example if one had a job like:
+        #
+        #   build:
+        #     runs-on: ubuntu-22.04
+        #     needs:
+        #       - lint
+        #     strategy:
+        #       matrix:
+        #         rust:
+        #           - stable
+        #           - beta
+        #           - nightly-2023-01-04
+        #
+        # Then the matrix names would be:
+        #   - "build (stable)"
+        #   - "build (beta)"
+        #   - "build (nightly-2023-01-04)"
         contexts:
           - lint
           - "deny (bans licenses sources)"
