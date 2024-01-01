@@ -1,4 +1,4 @@
-// Copyright (c) 2023 The MobileCoin Foundation
+// Copyright (c) 2023-2024 The MobileCoin Foundation
 
 //! A trait which provides a common API for types which can be initialized
 //! from data provided by random number generators.
